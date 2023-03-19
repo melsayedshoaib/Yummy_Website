@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Start Nav Section -->
+    <aside class="aside-nav min-vh-100 position-fixed d-flex top-0">
+        <div class="aside-links min-vh-100 d-flex flex-column justify-content-between p-4 text-white">
+            <div class="links">
+                <ul class="list-unstyled overflow-hidden">
+                    <li class="py-2 link-one">Search</li>
+                    <li class="py-2 link-two">Categories</li>
+                    <li class="py-2 link-three">Area</li>
+                    <li class="py-2 link-four">Ingredients</li>
+                    <li class="py-2 link-five">Contact Us</li>
+                </ul>
+            </div>
+            <div class="footer text-center">
+                <div class="icons mb-1">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="info">
+                    <p><p>Copyright <span class="text-success">2023</span> <br> All Rights Reserved.</p></p>
+                </div>
+            </div>
+        </div>
+        <div class="aside-control d-flex flex-column justify-content-between px-2 py-4 text-center bg-white text-black">
+            <div class="img">
+                <img src="imgs/logo.png" alt="logo">
+            </div>
+            <div class="aside-control-icon">
+                <i class="fa-solid fa-x open-close-btn fs-3"></i>   
+            </div>
+            <div class="aside-control-icons">
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </aside>
+    <!-- End Nav Section -->
+    <!-- Start Search Section -->
+    <section class="container sec-one">
+        <div class="row py-4">
+            <div class="col-md-6">
+                <input type="text" placeholder="Search by Name" class="form-control bg-transparent text-white" id="sbn">
+            </div>
+            <div class="col-md-6">
+                <input type="text" placeholder="Search by first letter" class="form-control bg-transparent text-white" id="sbfl" maxlength="1">
+            </div>  
+        </div>
+        <div class="row py-5 g-4" id="displayContent"></div>
+        <div class="row py-5 g-4 d-none" id="displayContentwithid"></div>
+    </section>
+    <!-- End Search Section -->
+    <!-- Start Categories Section -->
+    <section class="container sec-two">
+        <div class="row py-5 g-4" id="displayCategories"></div>
+        <div class="row py-5 g-4 d-none" id="displayCategoriesMeals"></div>
+        <div class="row py-5 g-4 d-none" id="displayCategoriesMealswithid"></div>
+    </section>
+    <!-- End Categories Section -->
+    <!-- Start Area Section -->
+    <section class="sec-three">
+        <div class="row py-5 g-4 w-75 m-auto" id="displayAreas"></div>
+        <div class="row py-5 g-4 d-none w-75 m-auto" id="displayAreasMeals"></div>
+        <div class="row py-5 g-4 d-none w-75 m-auto" id="displayAreasMealswithid"></div>
+    </section>
+    <!-- End Area Section -->
+    <!-- Start Ingredients Section -->
+    <section class="sec-four">
+        <div class="row py-5 g-4 w-75 m-auto text-center" id="displayIngredients"></div>
+        <div class="row py-5 g-4 d-none w-75 m-auto" id="displayIngredientsMeals"></div>
+        <div class="row py-5 g-4 d-none w-75 m-auto" id="displayIngredientsswithid"></div>
+    </section>
+    <!-- End Ingredients Section -->
+    <!-- Start Contact Us Section -->
+    <section class="sec-five">
+        <div class="container w-75 m-auto d-flex align-items-center justify-content-center min-vh-100">
+            <form>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <input type="text" placeholder="Enter Your Name" id="nameInput" class="form-control">
+                    <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">Special characters and numbers not allowed</div>
+                </div>
+                <div class="col-md-6">
+                    <input type="email" placeholder="Enter Your Email" id="emailInput" class="form-control">
+                    <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">Email not valid *exemple@yyy.zzz</div>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Enter Your Phone" id="phoneInput" class="form-control">
+                    <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">Enter valid Phone Number</div>
+                </div>
+                <div class="col-md-6">
+                    <input type="number" placeholder="Enter Your Age" id="ageInput" class="form-control">
+                    <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">Enter valid age</div>
+                </div>
+                <div class="col-md-6">
+                    <input type="password" placeholder="Enter Your Password" id="passwordInput" class="form-control">
+                    <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">Enter valid password *Minimum eight characters,
+                            at least one letter and one number:*</div>
+                </div>
+                <div class="col-md-6">
+                    <input type="password" placeholder="Repassword" id="repasswordInput" class="form-control">
+                    <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none">Enter valid repassword</div>
+                </div>
+                <button id="submitBtn" disabled="true" class="btn btn-outline-danger px-2 mt-3 w-25 m-auto" type="submit">Submit</button>
+            </div>
+            </form>
+        </div>
+    </section>
+    <!-- End Contact Us Section -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
