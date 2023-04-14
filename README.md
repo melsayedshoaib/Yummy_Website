@@ -1,7 +1,7 @@
 # Yummy_Website
 ## Created With
 <ul>
-  <li>HTML</li>
+  <li>HTML5</li>
   <li>CSS3</li>
   <li>JavaScript</li>
   <li>jQuery</li>
